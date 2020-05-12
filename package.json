@@ -1,0 +1,15 @@
+{
+  "name": "egami-search",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "web-ext run --source-dir ./src",
+    "build": "web-ext build --overwrite-dest --source-dir ./src --artifacts-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MCAxiaz/egami-search.git"
+  },
+  "devDependencies": {
+    "web-ext": "^4.1.0"
+  }
+}
