@@ -1,6 +1,6 @@
 {
   "name": "egami-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "web-ext run --source-dir ./src",
     "build": "web-ext build --overwrite-dest --source-dir ./src --artifacts-dir ./dist"
