@@ -18,4 +18,4 @@ browser.contextMenus.onClicked.addListener(info => {
     }
 })
 
-const generateSearchUrl = (imageUrl) => `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(imageUrl)}`
+const generateSearchUrl = (imageUrl) => `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(imageUrl)}`
