@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+
+env:
+  TAG_VERSION: ${{ github.ref_name }}
+  NODE_VERSION: 18.13.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build Artifacts
+        run: | 
+          npm install --global web-ext
+          npm run build
+
+      - name: Extract Version
+        run: echo VERSION=${TAG_VERSION#v} >> $GITHUB_ENV
+
+      - name: GH Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/egami_search-${{ env.VERSION }}.zip
