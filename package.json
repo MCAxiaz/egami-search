@@ -10,6 +10,6 @@
     "url": "https://github.com/MCAxiaz/egami-search.git"
   },
   "devDependencies": {
-    "web-ext": "^4.1.0"
+    "web-ext": "^7.4.0"
   }
 }
